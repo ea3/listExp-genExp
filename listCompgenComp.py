@@ -1,3 +1,5 @@
+import array
+
 # Cartesian product using a list comprehension
 
 colors = ['black', 'white']
@@ -16,3 +18,11 @@ print(tshirts)
 symbols = 'ÓÔÕÖ×ØÙÚÛÜÝ'
 tuple1 = tuple(ord(symbol) for symbol in symbols)
 print(tuple1)
+
+array1 = array.array('I', (ord(symbol) for symbol in symbols))
+print(array1)
+
+colors = ['black', 'white']
+sizes = ['S', 'M', 'L']
+for tshirt in ('%s %s' % (c, s) for c in colors for s in sizes):
+    print(tshirt)
